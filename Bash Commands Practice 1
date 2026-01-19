@@ -1,0 +1,42 @@
+Question - 1
+Verify your current working directory ? 
+Command: pwd
+Description: pwd will print the current working directory
+Question 2:
+List "/etc" directory files and directories ?
+Command: ls /etc
+Description: ls command will list files and directories under given directory
+Question 3:
+List ".conf" files only under "/etc" directory ?
+Command: ls -l /etc/*.conf
+Description: ls command will list the contents under /etc directory and if we will pass pattern like *.(string) , it will look for all the files having matching string at the end of every file name
+Question 4:
+Print total number of ".conf" files only under "/etc" directory ?
+Command: ls -l /etc/*.conf | wc -l
+Description: ls command will list files under /etc directory and *.conf will filter all files having extension as .conf , using pipe separator we can call wc -l command to print the total number of files having .conf extension
+Question 5:
+Create an empty directory with name "autopilot" under "/tmp" directory ?
+Command: mkdir /tmp/autopilot
+Description: mkdir will create the empty directory with given name
+Question 6:
+Create an empty file with name "devops.txt" under "/tmp/autopilot/" directory ?
+Command: touch /tmp/autopilot/devops.txt
+Description: touch command will create an empty file under given path with given name
+Question 7:
+Change (Switch) your directory to "/tmp/autopilot/" ?
+Command: cd /tmp/autopilot/
+Description: cd command is used to change the directory, using cd we can switch to the given path
+Question 8:
+Switch your directory to /tmp/autopilot and then print "Hello Devops" into the "devops.txt" file in the "/tmp/autopilot" directory ?
+Command: cd /tmp/autopilot/ ; echo "Hello Devops" > devops.txt
+Description: echo command is used to print the message on screen , we can also use echo to print inside the given file, see the example above
+Question 9:
+Display the content of "/tmp/autopilot/devops.txt" file on screen ?
+Command: cat devops.txt
+Description: cat command will print the file content on screen
+Question 10:
+Switch your directory to /tmp/autopilot then Create a copy of "devops.txt" file and name the copy as "pilot.txt" ?
+Command: cd /tmp/autopilot ; cp devops.txt pilot.txt
+OR
+Command: cp /tmp/autopilot/devops.txt /tmp/autopilot/pilot.txt (can be triggered without changing the directory)
+Description: cp command is used to create a copy of source file , syntax of cp command: cp source_file destination_file
