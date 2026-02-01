@@ -1,0 +1,76 @@
+Grep Command - "Global Regular Expression Print"
+- Grep Command search for a particular string/keyword from a file and print lines matching the pattern. 
+- it check line by line and print lines matching given pattern. 
+- We can use grep anywhere like with files,, searching for files, directories etc
+
+grep command syntax 
+grep [OPTION].. Pattern [File]..
+
+| pipe symbol is use to combine different commands 
+
+ls | grep file2
+
+CASE 1
+How to ignore the upper and lower case while searching - grep -i "keyword" file 
+- grep Candy users.csv - in candy if we use smaller it will not print anything because it is case sensitive.
+- grep -i candy users.csv - -i is ignore case sensitive.
+
+CASE 2
+To search everything except given pattern/keyword - grep -v "keyword" file ( what ever the pattern or word we provide except that search everything) 
+- grep -v john file1 - will give other than john 
+
+CASE 3
+To print how many times (count) given keyword present in file 
+- grep -c "keyword" file 
+
+CASE 4 
+To search for a exact match of given keyword in a file 
+- grep Cand users.csv ( it will give all the possible of the keyword )
+- grep -w "keyword" file ( when using -w it will give the exact match. when you dont want the related word but want the exact match)
+
+CASE 5
+To print the line no. of matches of given keyword in a file
+- grep -n "keyword" file ( will give the line number of the keyword)
+
+CASE 6
+To search a given keyword in multiple files
+- grep "keyword" file1 file2...
+Note: By default result of multiple files shows file name in front of the result 
+
+CASE 7 
+To suppress file names while search a given keyword in multiple files 
+- grep -h "keyword" file1 file2... ( if dont want the file name )
+
+CASE 8
+To search multiple keywords in a file 
+- grep -e "keyword1" -e "keyword2" file or egrep "john|sara|candy" file1 
+
+CASE 9
+To only print file names which matches given keyword
+- grep -l "keyword" file1 file2 (only the name of the file in which the keyword is present)
+
+CASE 10
+To get the keywords/pattern from a file and match with a another file 
+- grep -f keyword.txt file ( grep -f file1 (pattern) file2 (in which you want to search for) )
+- grep -f file1 users.csv (shows matched pattern)
+
+CASE 11
+To print the matching line which start with given keyword
+- grep "^keyword" file 
+
+CASE 12
+To print the matching line which end with given keyword 
+- grep "keyword$" file 
+
+CASE 13
+Suppose we have 100 files in a directory (dirA) and we need to search a keyword in all the files 
+- grep -R "keyword" dirA/
+
+CASE 14
+if you just wanna search but dont want to print on terminal 
+- grep -q "keyword" file (this will be useful in the shell scripting, where we need to check something is present or not)
+
+CASE 15
+If you want to suppress error message
+- grep -s "keyword" file 
+
