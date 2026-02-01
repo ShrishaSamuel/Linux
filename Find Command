@@ -1,0 +1,7 @@
+CASE 1
+How to search a file based on its name?
+- find /path/ -name <file_name>
+
+CASE 2
+How to ignore upper & lower case in file name while searching files?
+- find /path/ -iname <file_name>
