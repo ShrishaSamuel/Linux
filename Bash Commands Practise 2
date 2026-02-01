@@ -1,0 +1,51 @@
+Question 11:
+Move "/tmp/autopilot/pilot.txt" file to "/etc" directory ?
+Command: mv /tmp/autopilot/pilot.txt /etc/
+Description: mv command is used to move the source file to destination file/directory
+Question 12:
+Delete the file "/etc/pilot.txt" ?
+Command: rm /etc/pilot.txt
+Description: rm command is used to remove the given file name, rm command will ask for confirmation before deleting the file
+Question 13:
+Create an empty file "devops.txt" under "/tmp/autopilot" directory and then remove the file "/tmp/autopilot/devops.txt" forcefully with "rm" command ?
+Command: rm -f /tmp/autopilot/devops.txt
+Description: rm with -f command will delete the file forcefully with any confirmation
+Question 14:
+Switch your directory to "/etc" and then display top 10 rows of "group" file ?
+Command:
+cd /etc
+head group
+Description: cd is used to switch the working directory and head command is used to print the top 10 rows given file
+Question 15:
+Switch your directory to "/etc" and then display top 5 rows of group file ?
+Command:
+cd /etc
+head -5 group
+Description: cd is used to switch the working directory and head -5 command is used to print the top 5 rows given file
+Question 16:
+Switch your directory to "/etc" and then display last 10 rows of "group" file ?
+Command:
+cd /etc
+tail group
+Description: cd is used to switch the working directory and tail command is used to print the last 10 rows given file
+Question 17:
+Switch your directory to "/etc" and then display last 2 rows of "group" file ?
+Command:
+cd /etc
+tail -2 group
+Description: cd is used to switch the working directory and tail -2 command is used to print the last 2 rows of given file
+Question 18:
+Print the current date and time on screen ?
+Command: date
+Description: date command is used to print the current system date and time on screen
+Question 19:
+Print current date in the format "DD/MM/YYYY" ?
+Command: date +'%d/%m/%Y'
+Description: we can pass required pattern with date command , for eg: date +'%d/%m/%Y' , here %d is for current date , %m for month and %Y is for the current year
+Question 20:
+Print current time in the format "HH:SS" ?
+Command: date +'%H:%M'
+Description: we can pass required pattern with date command , for eg: date +'%H:%M' , here %H is for current Hour , %M for running minute
+
+
+
