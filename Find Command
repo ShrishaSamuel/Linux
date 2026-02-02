@@ -1,7 +1,96 @@
 CASE 1
 How to search a file based on its name?
-- find /path/ -name <file_name>
+ - find /path/ -name <file_name> ( find /home/paul/ -name test)
 
 CASE 2
-How to ignore upper & lower case in file name while searching files?
-- find /path/ -iname <file_name>
+How to ignore upper & lower case in file name while searching files.
+- find /path/ -iname <file_name> 
+
+CASE 3
+How to search all the files which start with letter f?
+- find /path/ -iname "f*"
+
+CASE 4
+How to search all the files with extension .xml or .sh?
+- find /path/ -name *.xml -o -name *.sh
+
+-o --> is logical OR operator 
+-a --> is logical AND operator
+
+CASE 5
+How to find only file or only directory in a given path?
+- find /path/ -type f 
+
+- find . -type d ( to find in the present directory)
+
+- f for file
+- d for directory
+- i for symbolic link
+- b for block device 
+- s for socket 
+
+CASE 6 
+How to search files for a given user only (example: file owned by root user)?
+- find /path/ -user root 
+
+- find . -type root (to find in the current location)
+
+CASE 7
+How to search a file based on their size?
+- find /path/ -size 50M
+
+- find . -size 20M ( for current location) 
+
+- M for MB
+- k for KB
+- G for GB
+- c for bytes 
+
+CASE 8 
+How to search all the files whose size are between 10-50 MB? (between range)
+- find /path/ -size +10M -size -50M  (+10 more than 10, -50 less than 50)
+
+CASE 9
+How to search 15days old files?
+- find /path/ -mtime 15
+
+-mtime 15 --> modified exactly 15days ago (between 15 and 16 days ago)
+-mtime +15 --> modified more than 15days ago 
+-mtime -15 --> modified less than 15days ago (within the last 15 days)
+
+
+similarly 
+ -atime 2: accessed in last two days
+ -mmin 10: modified in last 10 min
+ -cmin 10: created in last 10 min
+ -amin 10: accessed in last 10 min
+
+CASE 10
+How to search all the empty files in a given directory?
+find /path/ -empty
+
+CASE 11
+How to search all the empty files in a given directory and at the same time delete them?
+find /path/ -empty -exec rm {} \; - to remove
+find . -empty ls -lt {} \; - executes the empty files, then execute the ls -lt
+
+CASE 12
+How to search a file based on their permissions?
+
+find /path/ -perm /u=r
+find /path/ -perm 777
+
+CASE 13
+How to search a file based on the no. of links?
+find /path/ -links <no._of_link>
+
+CASE 14
+How to search a file based on the inode no.?
+find /path/ -inum <inode_no._of_file>
+
+ls -li --> inode number will display
+
+CASE 15
+How to search all the files which are modified/created after last.txt file?
+find /path/ -newer last.txt
+
