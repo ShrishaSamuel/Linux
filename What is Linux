@@ -1,0 +1,52 @@
+Linux 
+
+def: 
+- Linux is an open-source operating system inspired by unix.
+- it is known for its security, flexibility, reliability, performance.
+
+what is an OS?
+- An operating system is the software that sits between you and your computer's hardware.
+- it manages everything - your files, your apps, your memory, and even your keyboard and screen.
+
+UNIX
+- Unix is a powerful, multitasking operating system developed in the 1970s at AT&T's Bell Labs
+- it laid the design foundation for many modern operating systems, including Linux, macOS etc.
+
+--------------------------------------------------------------------
+
+Is there an OS called "Unix" today?
+No single OS today is simply called "UNIX", but several modern operating systems are certified as UNIX or are based on it.
+
+Unix was a real OS, but today, it lives on through its certified versions (AIX,HP-UX,macOS) and Unix-like systems like Linux
+
+
+Linux VS Unix
+
+Unix is a closed-source, licensed OS family used in commercial systems.
+Linux is a free, open-source Unix-like OS used widely around the world.
+
+History:
+Created by Linux Torvalds in 1991.
+The name "Linux" comes from Linus+Unix.
+
+LINUX IS NOT AN OPERATING SYSTEM
+- Linux is an open-source kernel.
+- A kernel is the core part of an operating system, managing system resources and communication between hardware and software.
+
+Linux Distributions (Distros)
+An operating system made from a software collection, which includes the Linux kernel and often a package management system.
+
+-------------------------------------------------------------------------------------
+
+Key Features:
+- open Source : source code is freely available and can be modified.
+- Multiuser: Multiple users can access system resources simultaneously.
+- Multitasking : can run multiple tasks simultaneously.
+- Security : Strong security features and regular updates.
+- Portability : can run on various hardware platforms.
+
+------------------------------------------------------------------------------
+Ubuntu - its widely used, has extensive documentation, and a large community for support.
+Centos - Community version of red hat enterprise Linux (RHEL) - Commonly used in enterprise environments.
+
+-------------------------------------------------------------------------------
