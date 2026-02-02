@@ -1,0 +1,71 @@
+what is file compression
+
+File compression in Linux means reducing the size of a file using algorithms to save space or transfer faster.
+
+why do we need to compress a file?
+- when transferring files of large size from one server to another
+- when keeping backups of old files
+- or simply saving storage space on your server
+
+ls -lh -> to see the size of the folder and files in human readable format
+
+gzip file.txt (1.1G file reduced to 1.1M file.txt.gz) compress
+
+gunzip file.txt.gz ( 1.1M file changed to 1.1G file.txt) decompress
+
+while compressing you want the original file as well, so redirect the compressed zip to the another file
+gzip -c file.txt > file.txt.gz ( original file and the compressed file will be present)
+
+
+Multiple files to be compressed
+
+gzip command only works on the files not folder, in this case we can do the file archiving
+
+what is file Archiving
+File archiving means collecting multiple files(and directories) into a single file for easier storage, backup, or transfer - without necessarily reducing their size.
+
+# creating a tar archive
+tar -cvf archive_name.tar file1.txt file2.txt
+
+1)we are creating it into tar
+tar -cvf backup.tar backup/ 
+ls -lh --> a backup.tar file is created
+
+#compressing the tar archive with gzip
+tar -czvf archive_name.tar.gz file1.txt file2.txt
+
+here we are compressing
+gzip backup.tar
+ls -lh --> backup.tar.gz 
+
+#Decompressing a tar.gz archive 
+tar -xzvf archive_name.tar.gz
+
+rm -rf backup
+ls -lh --> backup folder will be deleted
+
+tar -xvf backup.tar.gz
+
+ls -lh --> the backup folder will be available
+ls backup --> all the file inside the folder is present
+
+#Compressing multiple files
+zip archive_name.zip file1.txt file2.txt
+
+zip files.zip file1 file2
+ls -lh --> zipped file will be available
+
+#Decompressing a zip archive 
+unzip archive_name.zip
+
+unzip files.zip
+
+Zip is the easiest and the straightforward command in all the cases, so why dont we always use zip command and why gzip or tar?
+
+Zip command is not always comes pre-default or pre-installed on all the Linux environment
+
+when to use tar,gzip VS zip?
+
+gzip - best for compressing a single large file.
+tar+gzip - best when you need to compress an entire folder
+zip - Best when you need compatibility with windows or macOS as .zip is widely supported
