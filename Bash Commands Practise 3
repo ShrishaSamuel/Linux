@@ -1,0 +1,24 @@
+Question 21:
+Display current month calendar on screen ?
+Command: cal
+Description: cal command is used to print the current month calendar on screen
+
+Question 22:
+Display the hostname of your current server ?
+Command: hostname
+Description: hostname command is used to display the hostname of current machine
+
+Question 23:
+Display the current logged in username ?
+Command: whoami
+Description: whoami command is used to display the current logged in user
+
+Question 24:
+Ping "udemy.com" from your terminal ?
+Command: ping -c5 udemy.com
+Description: ping command is used to test connectivity, reachability.
+
+Question 25:
+Print recently triggered commands on your Linux system ?
+Command: history
+Description: history command is used to view the list of commands that user had triggered on the terminal
